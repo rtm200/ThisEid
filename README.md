@@ -1,4 +1,4 @@
-# Sofre App – Project Overview
+# WeNeedAName App – Project Documentation
 
 ## 📖 Glossary
 
