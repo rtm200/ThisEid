@@ -1,6 +1,6 @@
 # WeNeedAName App – Project Documentation
 
-## 📖 Glossary
+## Glossary
 
 - **Landing Page**  
   The first page a user sees when visiting the website (`www.site.com/`) before logging in or registering.
@@ -14,7 +14,7 @@
 
 ---
 
-# 🚀 Application Flow
+# Application Flow
 
 ## 1. Entry Point
 
@@ -26,7 +26,7 @@ www.site.com/
 There are two possible approaches:
 
 ### Option A – Use a Landing Page
-- Show a marketing or introduction page.
+- Show a landing page or introduction page.
 - Provide **Login** and **Register** buttons.
 
 ### Option B – No Landing Page
@@ -104,7 +104,7 @@ www.site.com/sofre/[id]
 
 ---
 
-# 🗄 Database Structure & RLS Policies
+# Database Structure & RLS Policies
 
 We are using **Supabase** as a third-party backend service.
 
@@ -157,7 +157,7 @@ Each gift:
 
 ---
 
-# 🔐 Row Level Security (RLS)
+# Row Level Security (RLS)
 
 RLS policies ensure:
 
@@ -168,7 +168,7 @@ RLS policies ensure:
 
 ---
 
-# 🌍 Routes
+# Routes
 
 | Route | Description |
 |-------|-------------|
@@ -180,7 +180,7 @@ RLS policies ensure:
 
 ---
 
-# 🧩 Dynamic Parameters
+# Dynamic Parameters
 
 Routes containing dynamic values:
 
@@ -197,7 +197,7 @@ Each `[id]` and `[token]` is dynamically generated and unique.
 
 ---
 
-# ✅ Summary
+# Summary
 
 - Users authenticate via Supabase.
 - Each user has a profile.
@@ -209,4 +209,4 @@ Each `[id]` and `[token]` is dynamically generated and unique.
 
 ---
 
-> This document serves as the technical and architectural overview of the Sofre application.
+> This document serves as the technical and architectural overview of the application.
