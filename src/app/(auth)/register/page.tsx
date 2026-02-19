@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { createClient } from "@/lib/supabase-browser"
 import { useRouter } from "next/navigation"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 export default function RegisterPage() {
   const supabase = createClient()
@@ -22,26 +24,30 @@ export default function RegisterPage() {
       return
     }
 
-    router.push("/home")
+    router.push("/login")
   }
 
   return (
-    <div className="p-10 space-y-4">
+    <div className="p-10 space-y-4 flex flex-col items-start">
       <h1>Register</h1>
-      <input
-        className="border p-2"
+      <Input
+        className="border p-2 w-60"
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input
-        className="border p-2"
+      <Input
+        className="border p-2 w-60"
         type="password"
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleRegister} className="bg-black text-white p-2">
+      <Button onClick={handleRegister} className="bg-black text-white">
         Register
-      </button>
+      </Button>
+
+      <Button>
+        <a href="/login">Login</a>
+      </Button>
     </div>
   )
 }

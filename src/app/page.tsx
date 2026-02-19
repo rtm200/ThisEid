@@ -48,11 +48,8 @@ export default async function HomePage() {
   }
 
   return (
-    <div className="p-10">
+    <div className="p-10 inline-flex flex-col gap-5">
       <h1>Welcome {user.email}</h1>
-
-      <h2>Your Sofres</h2>
-      <pre>{JSON.stringify(sofres, null, 2)}</pre>
       <form className="flex gap-2 w-[500]"
         action={async (formData) => {
           "use server"
@@ -73,6 +70,10 @@ export default async function HomePage() {
           Create Sofre
         </Button>
       </form>
+      <h2>Your Sofres:</h2>
+      <a href={sofres?.[0]?.id ? `/sofre/${sofres[0].id}` : "#"} className="hover:opacity-90 bg-foreground p-2 rounded-xl text-white">
+        <pre>{JSON.stringify(sofres, null, 2)}</pre>
+      </a>
       <div>
         <h2 className="text-xl font-semibold">Your Membered Sofres</h2>
         <pre>{JSON.stringify(memberedSofres, null, 2)}</pre>
